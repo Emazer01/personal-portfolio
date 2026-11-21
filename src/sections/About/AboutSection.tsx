@@ -15,9 +15,9 @@ export const AboutSection: React.FC = () => {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="01 / ABOUT ME"
-          title="Engineering Software & Infrastructure With Purpose"
-          description="A concise overview of my academic foundation, multidisciplinary technical interests, and engineering principles."
+          eyebrow="About"
+          title="Leadership Discipline & Technical Engineering"
+          description="An overview of my background as an Indonesian Air Force Officer and Computer Science graduate combining leadership with hands-on systems engineering."
         />
 
         <div className="grid gap-8 lg:grid-cols-12">

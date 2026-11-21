@@ -1,25 +1,44 @@
 import { ExperienceItem } from '../types/portfolio';
 
-/**
- * Editable professional & engineering experience timeline.
- * Conservative representation based strictly on verifiable public engineering work
- * plus an editable template slot for LinkedIn/CV confirmation.
- */
 export const experienceData: ExperienceItem[] = [
   {
-    id: 'fullstack-ai-engineering',
-    organization: 'Independent & Academic Software Engineering Portfolio',
-    position: 'Full-Stack Developer & Applied AI Builder',
-    employmentType: 'Project-Based / Engineering Portfolio',
-    period: '2022 – Present (Based on Public GitHub Activity)',
+    id: 'tni-au-officer',
+    organization: 'Indonesian Air Force (TNI Angkatan Udara)',
+    position: 'Commissioned Officer (Perwira TNI AU)',
+    employmentType: 'Active Duty Military Officer',
+    period: '2024 – Present',
     location: 'Indonesia',
     description:
-      'Architected, developed, and iterated on full-stack web platforms and computer vision microservices—connecting React/TypeScript frontends, Node.js/Express REST APIs, PostgreSQL databases, and Python AI inference engines.',
+      'Serving as an Indonesian Air Force Officer applying Computer Science, IT infrastructure, network engineering, and software modernization capabilities in support of organizational effectiveness and technical readiness.',
     responsibilities: [
-      'Engineered multi-tier web systems featuring role-based access control (JWT RBAC), structured data reporting, and analytics visualizations.',
-      'Built Python/FastAPI computer vision pipelines integrating YOLO, OpenCV, PyTorch, and MediaPipe for automated visual detection and assessment.',
-      'Designed local network (LAN) and multi-device deployment workflows supporting live webcam, RTSP camera streams, and containerized backends.',
-      'Implemented application security fundamentals, input validation, and modular separation between client, API, and AI services.'
+      'Applying structured leadership, accountability, and operational discipline across assigned institutional duties.',
+      'Supporting IT infrastructure readiness, local network architecture, and systems integration initiatives.',
+      'Designing and evaluating modern software and computer vision tools tailored for self-hosted, reliable environments.'
+    ],
+    technologies: [
+      'IT Infrastructure',
+      'Network Engineering',
+      'System Architecture',
+      'Full-Stack Systems',
+      'Applied AI'
+    ],
+    achievements: [
+      'Bridging formal military officer leadership with modern full-stack software engineering and computer vision development.'
+    ]
+  },
+  {
+    id: 'fullstack-ai-engineering',
+    organization: 'Applied Software & Computer Vision Systems',
+    position: 'Full-Stack Developer & AI Systems Engineer',
+    employmentType: 'Technical Engineering Track',
+    period: '2022 – Present',
+    location: 'Indonesia',
+    description:
+      'Architected and engineered multi-service web platforms and self-hosted AI microservices integrating React/TypeScript frontends, Node.js/Express REST APIs, PostgreSQL databases, and Python/YOLO computer vision pipelines.',
+    responsibilities: [
+      'Developed full-stack platforms featuring role-based access control (JWT RBAC), structured reporting, and analytical visualization.',
+      'Engineered Python/FastAPI computer vision pipelines using YOLO, OpenCV, PyTorch, and MediaPipe for objective assessment and detection.',
+      'Configured local area network (LAN) multi-device hosting, RTSP video stream ingestion, and Dockerized backend deployments.'
     ],
     technologies: [
       'ReactJS',
@@ -33,31 +52,8 @@ export const experienceData: ExperienceItem[] = [
       'Docker'
     ],
     achievements: [
-      'Delivered multi-service architectures across SITRAK-AI, SIKAPTA AI, Tani-Cek AI, Jaga Resimen, and Tunkin Web.',
-      'Maintained 25 public repositories spanning frontend applications, backend APIs, and AI inference services.'
+      'Built and documented production-oriented architectures including SITRAK-AI, SIKAPTA AI, Tani-Cek AI, Jaga Resimen, and Tunkin Web.',
+      'Authored and maintained 25 public repositories across frontend, backend API, security, and computer vision domains.'
     ]
-  },
-  {
-    id: 'professional-role-editable-slot',
-    organization: 'Organization / Institution Name (Editable Slot)',
-    position: 'IT Infrastructure / Network / Software Engineering Role',
-    employmentType: 'Confirm Employment Type on LinkedIn',
-    period: 'Add Start Date – End Date',
-    location: 'Indonesia',
-    description:
-      'Editable template entry ready for your formal work experience, internship, or organizational role from LinkedIn. Update src/data/experience.ts with exact verified details.',
-    responsibilities: [
-      'Add verified operational, IT infrastructure, networking, or software development responsibilities.',
-      'Document measurable engineering improvements or system administration duties.'
-    ],
-    technologies: [
-      'IT Infrastructure',
-      'Networking',
-      'Software Engineering'
-    ],
-    achievements: [
-      'Add verified professional accomplishments, awards, or key deliverables here.'
-    ],
-    isEditableTemplate: true
   }
 ];

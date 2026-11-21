@@ -64,8 +64,8 @@ export const GitHubTelemetryPanel: React.FC<GitHubTelemetryPanelProps> = ({
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="06 / GITHUB INTEGRATION"
-          title="Open Source & Repository Telemetry"
+          eyebrow="GitHub Repositories"
+          title="Open Source & Codebase Overview"
           description="Live public profile metrics, top programming languages, and cached API synchronization for @Emazer01 with resilient offline fallbacks."
           rightSlot={
             <div className="flex flex-wrap items-center gap-2.5">

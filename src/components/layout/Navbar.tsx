@@ -38,8 +38,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               <div className="font-editorial text-sm font-semibold leading-none text-[var(--text-primary)]">
                 {profileData.name}
               </div>
-              <div className="mt-1 font-mono text-[10px] tracking-wider text-[var(--text-secondary)]">
-                ENG // INFRA // AI
+              <div className="mt-1 font-mono text-[10px] tracking-wide text-[var(--text-secondary)]">
+                Indonesian Air Force Officer &bull; B.Comp.Sc
               </div>
             </div>
           </a>

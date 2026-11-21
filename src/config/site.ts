@@ -1,6 +1,6 @@
 export const siteConfig = {
   siteName: 'Gary Ferdinand Wahyudi',
-  siteTitle: 'Gary Ferdinand Wahyudi — Software Engineering, Infrastructure & Applied AI',
+  siteTitle: 'Gary Ferdinand Wahyudi — Indonesian Air Force Officer | Software, Infrastructure & AI',
   siteUrl: 'https://emazer01.github.io/personal-portfolio',
   github: {
     username: 'Emazer01',

@@ -1,53 +1,46 @@
 import { EducationItem } from '../types/portfolio';
 
-/**
- * Editable education timeline.
- * Update the study period, coursework, or additional training items once confirmed.
- */
 export const educationData: EducationItem[] = [
   {
     id: 'unhan-ri-bsc',
     institution: 'Universitas Pertahanan Republik Indonesia (Unhan RI)',
     shortInstitution: 'Unhan RI',
-    degree: 'Bachelor of Computer Science',
-    fieldOfStudy: 'Informatics / Computer Science',
-    location: 'Indonesia',
-    period: 'Study Period: Editable in src/data/education.ts',
-    isPlaceholderPeriod: true,
+    degree: 'Bachelor of Computer Science (S.Kom.)',
+    fieldOfStudy: 'Informatics — Faculty of Defense Science and Technology (FSTP)',
+    location: 'Bogor, Indonesia',
+    period: '2020 – 2024',
     description:
-      'Completed undergraduate Computer Science education combining foundational computing theory, software engineering, computer networks, and applied intelligent systems within a disciplined academic environment.',
+      'Completed undergraduate Computer Science education under full cadet formation within the Cohort 1 Undergraduate Cadet Corps Regiment (Resimen Korps Kadet Mahasiswa), combining defense leadership discipline with informatics engineering.',
     coursework: [
-      'Software Engineering & Web Systems',
+      'Software Engineering & Web Architecture',
       'Database Management Systems (PostgreSQL)',
       'Computer Networks & IT Infrastructure',
       'Artificial Intelligence & Computer Vision',
       'Algorithms, Data Structures & System Design',
-      'Application & Backend Security Fundamentals'
+      'Information & Application Security'
     ],
     achievements: [
-      'Designed and built multi-service full-stack and computer vision systems demonstrated across public engineering repositories.',
-      'Editable slot: Add thesis title, GPA/honors, or academic distinctions here.'
+      'Cadet Officer Formation — Sersan Mayor Satu Kadet (Cohort 1, Resimen Korps Kadet Mahasiswa).',
+      'Undergraduate Thesis (July 2024): "Development of a Responsive Web-Based Guard Duty Reporting System for the Cadet Corps Regiment" (Jaga Resimen).'
     ]
   },
   {
-    id: 'additional-training-slot',
-    institution: 'Specialized Technical Training & Bootcamps',
-    degree: 'Full-Stack Web Development & Applied AI Track (Editable)',
-    fieldOfStudy: 'Software Engineering & Modern Web Architecture',
-    location: 'Indonesia',
-    period: 'Add Dates / Cohort Details',
-    isPlaceholderPeriod: true,
+    id: 'sman-taruna-nala',
+    institution: 'SMAN Taruna Nala Jawa Timur',
+    shortInstitution: 'SMAN Taruna Nala',
+    degree: 'High School Diploma — Mathematics & Natural Sciences (MIPA)',
+    fieldOfStudy: 'STEM & Leadership Boarding Curriculum',
+    location: 'Malang, East Java, Indonesia',
+    period: '2017 – 2020',
     description:
-      'Placeholder entry for intensive coding bootcamps, networking workshops, or technical coursework (evidenced by structured React, REST API, security, and unit-testing module repositories).',
+      'Completed leadership-oriented boarding secondary education integrating national academic science standards with character development, physical readiness, and disciplined campus life.',
     coursework: [
-      'ReactJS Frontend Architecture',
-      'Node.js & Express.js Backend Services',
-      'Authentication & API Security',
-      'Unit Testing & Client State Persistence'
+      'Mathematics & Physics',
+      'Leadership & Organizational Discipline',
+      'Foundational Computing & STEM'
     ],
     achievements: [
-      'Update institution name, exact certification period, and formal training outcomes once confirmed.'
-    ],
-    isEditableTemplate: true
+      'Prepared academic and leadership foundation for admission to Universitas Pertahanan Republik Indonesia.'
+    ]
   }
 ];

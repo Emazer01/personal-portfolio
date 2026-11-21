@@ -8,7 +8,6 @@ import {
   Mail,
   Send
 } from 'lucide-react';
-import { EditableBadge } from '../../components/common/EditableBadge';
 import { SectionHeader } from '../../components/common/SectionHeader';
 import { Button } from '../../components/ui/Button';
 import { Card } from '../../components/ui/Card';
@@ -67,9 +66,9 @@ export const ContactSection: React.FC = () => {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="08 / CONTACT"
+          eyebrow="Contact"
           title="Let's Connect and Build Something."
-          description="Open to software engineering, full-stack web development, IT infrastructure, network engineering, and applied AI collaborations."
+          description="Available for professional correspondence regarding software engineering, IT infrastructure, network systems, and applied AI."
         />
 
         <div className="grid gap-6 lg:grid-cols-12">
@@ -138,34 +137,27 @@ export const ContactSection: React.FC = () => {
               </div>
             </Card>
 
-            {/* Email Card (Never fabricates unconfirmed email) */}
-            <Card className="p-6 sm:col-span-2 lg:col-span-1">
-              <div className="flex flex-wrap items-start justify-between gap-4">
-                <div className="flex items-start gap-4">
-                  <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--bg-primary)] text-[var(--text-primary)]">
-                    <Mail className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2">
+            {/* Email Card (Shown when configured in siteConfig.contact.email) */}
+            {configuredEmail && (
+              <Card className="p-6 sm:col-span-2 lg:col-span-1">
+                <div className="flex flex-wrap items-start justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[var(--border-strong)] bg-[var(--bg-primary)] text-[var(--text-primary)]">
+                      <Mail className="h-5 w-5" aria-hidden="true" />
+                    </div>
+                    <div>
                       <span className="font-mono text-xs uppercase tracking-wider text-[var(--text-secondary)]">
                         Direct Email
                       </span>
-                      {!configuredEmail && (
-                        <EditableBadge label="Configure in src/config/site.ts" />
-                      )}
+                      <h3 className="mt-1 font-editorial text-lg font-bold text-[var(--text-primary)]">
+                        {configuredEmail}
+                      </h3>
+                      <p className="mt-1 text-xs text-[var(--text-secondary)]">
+                        Reach out directly via email or copy address below.
+                      </p>
                     </div>
-                    <h3 className="mt-1 font-editorial text-lg font-bold text-[var(--text-primary)]">
-                      {configuredEmail || 'Public Email Pending Configuration'}
-                    </h3>
-                    <p className="mt-1 text-xs text-[var(--text-secondary)]">
-                      {configuredEmail
-                        ? 'Reach out directly via email or copy address below.'
-                        : 'Set siteConfig.contact.email in src/config/site.ts to enable mailto and one-click copy.'}
-                    </p>
                   </div>
-                </div>
 
-                {configuredEmail && (
                   <div className="flex items-center gap-2">
                     <Button href={`mailto:${configuredEmail}`} variant="primary" size="sm">
                       Send Email
@@ -188,9 +180,9 @@ export const ContactSection: React.FC = () => {
                       )}
                     </button>
                   </div>
-                )}
-              </div>
-            </Card>
+                </div>
+              </Card>
+            )}
           </div>
 
           {/* Right Panel: Configured Contact Form OR Direct Availability Card */}
@@ -282,30 +274,28 @@ export const ContactSection: React.FC = () => {
               <div className="flex h-full flex-col justify-between">
                 <div>
                   <div className="font-mono text-xs uppercase tracking-[0.16em] text-[var(--accent-gold)]">
-                    Collaboration Focus
+                    Professional Correspondence
                   </div>
                   <h3 className="mt-2 font-editorial text-xl font-bold text-[var(--text-primary)]">
-                    Ready for Technical Roles &amp; Engineering Projects
+                    Technical Collaboration &amp; Institutional Inquiries
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-[var(--text-secondary)]">
-                    If you are looking for a Computer Science graduate combining full-stack development, IT infrastructure, network engineering, and computer vision capabilities, let&rsquo;s connect directly on LinkedIn or inspect my codebases on GitHub.
+                    For formal communication regarding software architecture, IT infrastructure, network engineering, or applied AI initiatives, please reach out directly via LinkedIn or inspect public repositories on GitHub.
                   </p>
                 </div>
 
                 <div className="mt-6 space-y-2.5 rounded-xl border border-[var(--border-subtle)] bg-[var(--bg-primary)] p-4 font-mono text-xs text-[var(--text-secondary)]">
                   <div className="flex items-center justify-between">
-                    <span>Location</span>
-                    <span className="text-[var(--text-primary)]">Indonesia</span>
+                    <span>Service</span>
+                    <span className="text-[var(--text-primary)]">TNI Angkatan Udara</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Primary Focus</span>
-                    <span className="text-[var(--accent-gold)]">Full-Stack • Infra • AI</span>
+                    <span>Alma Mater</span>
+                    <span className="text-[var(--text-primary)]">Universitas Pertahanan RI</span>
                   </div>
                   <div className="flex items-center justify-between">
-                    <span>Contact Form</span>
-                    <span className="text-[var(--text-secondary)]">
-                      Optional (set formEndpoint)
-                    </span>
+                    <span>Specialization</span>
+                    <span className="text-[var(--accent-gold)]">Software • Infra • AI</span>
                   </div>
                 </div>
 

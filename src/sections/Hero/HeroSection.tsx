@@ -6,7 +6,8 @@ import {
   Github,
   GraduationCap,
   Linkedin,
-  MapPin
+  MapPin,
+  Shield
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { siteConfig } from '../../config/site';
@@ -26,33 +27,23 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
     <section
       id="hero"
       tabIndex={-1}
-      className="relative overflow-hidden py-16 outline-none sm:py-24 lg:py-28"
+      className="relative overflow-hidden py-16 outline-none sm:py-24"
     >
-      {/* Subtle top ambient radial highlight */}
-      <div
-        className="pointer-events-none absolute -top-24 left-1/2 h-[420px] w-[820px] -translate-x-1/2 rounded-full opacity-25 blur-3xl"
-        style={{
-          background:
-            'radial-gradient(circle, rgba(214,181,109,0.22) 0%, rgba(56,189,248,0.12) 45%, transparent 72%)'
-        }}
-        aria-hidden="true"
-      />
-
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
-        {/* Left Editorial Column */}
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
+        {/* Left Formal Column */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.45 }}
+          transition={{ duration: 0.4 }}
           className="lg:col-span-7"
         >
           <div className="mb-5 flex flex-wrap items-center gap-2.5">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[var(--accent-gold)]/35 bg-[var(--accent-gold-soft)] px-3 py-1 font-mono text-[11px] font-medium tracking-wider text-[var(--accent-gold)]">
-              <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent-gold)]" aria-hidden="true" />
-              SOFTWARE • INFRASTRUCTURE • NETWORKING • AI
+            <span className="inline-flex items-center gap-2 rounded-md border border-[var(--accent-gold)]/40 bg-[var(--accent-gold-soft)] px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[var(--accent-gold)]">
+              <Shield className="h-3.5 w-3.5" aria-hidden="true" />
+              Indonesian Air Force Officer
             </span>
-            <span className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3 py-1 font-mono text-[11px] text-[var(--text-secondary)]">
-              <MapPin className="h-3 w-3 text-[var(--accent-blue)]" aria-hidden="true" />
+            <span className="inline-flex items-center gap-1.5 rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3 py-1 font-mono text-[11px] text-[var(--text-secondary)]">
+              <MapPin className="h-3 w-3 text-[var(--accent-gold)]" aria-hidden="true" />
               {profileData.location}
             </span>
           </div>
@@ -61,18 +52,16 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {profileData.name}
           </p>
 
-          <h1 className="font-editorial mt-3 text-4xl font-extrabold leading-[1.08] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-6xl">
+          <h1 className="font-editorial mt-3 text-4xl font-bold leading-[1.1] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-[3.25rem]">
             Building Ideas Into{' '}
-            <span className="bg-gradient-to-r from-[var(--accent-gold)] to-[var(--accent-blue)] bg-clip-text text-transparent">
-              Digital Solutions.
-            </span>
+            <span className="text-[var(--accent-gold)]">Digital Solutions.</span>
           </h1>
 
-          <p className="mt-6 max-w-xl text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
             {profileData.supportingDescription}
           </p>
 
-          <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[var(--text-secondary)]">
+          <div className="mt-5 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-[var(--text-secondary)]">
             <span className="inline-flex items-center gap-2">
               <GraduationCap className="h-4 w-4 text-[var(--accent-gold)]" aria-hidden="true" />
               <span>
@@ -87,7 +76,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           {/* Primary CTAs */}
           <div className="mt-8 flex flex-wrap items-center gap-3">
             <Button href="#projects" variant="primary" size="lg">
-              View My Projects
+              View Engineering Projects
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </Button>
 
@@ -126,40 +115,40 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* Key Quantitative Snapshot */}
+          {/* Formal Summary Strip */}
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-[var(--border-subtle)] pt-6">
             <div>
-              <div className="font-editorial text-2xl font-bold text-[var(--text-primary)]">
-                {repoCount}
+              <div className="font-editorial text-xl font-bold text-[var(--text-primary)] sm:text-2xl">
+                TNI AU
               </div>
               <div className="mt-0.5 font-mono text-[11px] text-[var(--text-secondary)]">
-                Public Repositories
+                Commissioned Officer
               </div>
             </div>
             <div>
-              <div className="font-editorial text-2xl font-bold text-[var(--text-primary)]">
-                3+
+              <div className="font-editorial text-xl font-bold text-[var(--text-primary)] sm:text-2xl">
+                S.Kom.
               </div>
               <div className="mt-0.5 font-mono text-[11px] text-[var(--text-secondary)]">
-                AI &amp; CV Systems
+                Unhan RI Informatics
               </div>
             </div>
             <div>
-              <div className="font-editorial text-2xl font-bold text-[var(--text-primary)]">
-                Full-Stack
+              <div className="font-editorial text-xl font-bold text-[var(--text-primary)] sm:text-2xl">
+                {repoCount} Repos
               </div>
               <div className="mt-0.5 font-mono text-[11px] text-[var(--text-secondary)]">
-                Infra &amp; Network Ready
+                Full-Stack &amp; AI Systems
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Right Visual Systems Column */}
+        {/* Right Formal Officer & Technical Summary Card */}
         <motion.div
-          initial={{ opacity: 0, y: 18 }}
+          initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.45, delay: 0.08 }}
           className="lg:col-span-5"
         >
           <SystemsNetworkCanvas avatarUrl={avatarUrl} />

@@ -34,7 +34,7 @@ export const FeaturedProjectCard: React.FC<FeaturedProjectCardProps> = ({
       <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           <Badge variant="gold">
-            0{index + 1} // FEATURED
+            System 0{index + 1}
           </Badge>
           <Badge variant="blue">{project.category}</Badge>
         </div>

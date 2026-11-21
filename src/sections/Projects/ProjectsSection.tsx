@@ -110,9 +110,9 @@ export const ProjectsSection: React.FC<ProjectsSectionProps> = ({ repos }) => {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="05 / PROJECTS SHOWCASE"
-          title="Featured Systems & Engineering Works"
-          description="Selected full-stack platforms and computer vision systems retrieved from GitHub (@Emazer01) and enriched with public-safe architectural summaries."
+          eyebrow="Engineering Projects"
+          title="Selected Systems & Software Portfolio"
+          description="Full-stack web platforms and computer vision applications retrieved from GitHub (@Emazer01) with concise, public-safe architectural summaries."
         />
 
         {/* Featured Systems Grid */}

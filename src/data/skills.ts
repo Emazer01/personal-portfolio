@@ -4,7 +4,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'software-development',
     title: 'Software Development',
-    code: '01 / CORE_ENG',
+    code: 'Discipline 01',
     summary: 'Modular architecture, clean typing, and end-to-end system design.',
     iconKey: 'code',
     accent: 'gold',
@@ -19,8 +19,8 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'frontend-engineering',
     title: 'Frontend Engineering',
-    code: '02 / CLIENT_UI',
-    summary: 'Responsive, high-clarity web applications and interactive dashboards.',
+    code: 'Discipline 02',
+    summary: 'Responsive, high-clarity web applications and institutional dashboards.',
     iconKey: 'layout',
     accent: 'blue',
     items: [
@@ -28,13 +28,13 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Next.js', context: 'Modern React framework & structured routing', tier: 'Applied' },
       { name: 'Tailwind CSS', context: 'Design tokens & responsive layout systems', tier: 'Core Stack' },
       { name: 'Chart.js & Reporting', context: 'Real-time telemetry, Excel & A4 print exports', tier: 'Applied' },
-      { name: 'Framer Motion', context: 'Purposeful interface transitions', tier: 'Applied' }
+      { name: 'Framer Motion', context: 'Restrained interface transitions', tier: 'Applied' }
     ]
   },
   {
     id: 'backend-engineering',
     title: 'Backend Engineering',
-    code: '03 / API_SERVICES',
+    code: 'Discipline 03',
     summary: 'Secure RESTful APIs, role-based access control, and service orchestration.',
     iconKey: 'server',
     accent: 'gold',
@@ -48,7 +48,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'database-data',
     title: 'Database & Data',
-    code: '04 / DATA_LAYER',
+    code: 'Discipline 04',
     summary: 'Relational modeling, persistent state, and analytical reporting pipelines.',
     iconKey: 'database',
     accent: 'blue',
@@ -62,7 +62,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'ai-computer-vision',
     title: 'AI & Computer Vision',
-    code: '05 / VISION_AI',
+    code: 'Discipline 05',
     summary: 'Real-time visual detection, pose estimation, and deep learning workflows.',
     iconKey: 'cpu',
     accent: 'gold',
@@ -77,7 +77,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'it-infrastructure',
     title: 'IT Infrastructure',
-    code: '06 / INFRA_OPS',
+    code: 'Discipline 06',
     summary: 'Reliable system environments bridging hardware inputs and software services.',
     iconKey: 'hard-drive',
     accent: 'blue',
@@ -91,7 +91,7 @@ export const skillCategories: SkillCategory[] = [
   {
     id: 'networking',
     title: 'Networking',
-    code: '07 / NET_ENG',
+    code: 'Discipline 07',
     summary: 'Connected local network architectures and real-time media transport.',
     iconKey: 'network',
     accent: 'gold',
@@ -99,14 +99,14 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Network Engineering', context: 'LAN topology planning & multi-device connectivity', tier: 'Core Stack' },
       { name: 'RTSP Video Streaming', context: 'IP camera feed ingestion over local networks', tier: 'Applied' },
       { name: 'Multi-Device LAN Hosting', context: 'Field-ready workstation, tablet & display sync', tier: 'Applied' },
-      { name: 'TCP/IP & HTTP Diagnostics', context: 'Cross-origin policies, ports & service routing', tier: 'Applied' }
+      { name: 'TCP/IP & HTTP Diagnostics', context: 'Routing, ports, CORS & service diagnostics', tier: 'Applied' }
     ]
   },
   {
     id: 'development-tools',
     title: 'Development Tools',
-    code: '08 / TOOLCHAIN',
-    summary: 'Modern workflows for rapid prototyping, collaboration, and CI/CD.',
+    code: 'Discipline 08',
+    summary: 'Modern workflows for disciplined delivery, version control, and CI/CD.',
     iconKey: 'wrench',
     accent: 'blue',
     items: [

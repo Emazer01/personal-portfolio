@@ -5,25 +5,24 @@ export const profileData: ProfileData = {
   name: 'Gary Ferdinand Wahyudi',
   shortName: 'Gary F. Wahyudi',
   monogram: 'GFW',
-  roleTitle: 'Software Engineer • Infrastructure & Networking • Applied AI',
+  roleTitle: 'Indonesian Air Force Officer • Software & Infrastructure Engineer',
   headline: 'Building Ideas Into Digital Solutions.',
   supportingDescription:
-    'Computer Science graduate and technology enthusiast focused on software engineering, IT infrastructure, networking, and intelligent digital solutions.',
+    'Indonesian Air Force Officer and Computer Science graduate from Universitas Pertahanan Republik Indonesia (Unhan RI), specializing in software engineering, IT infrastructure, network engineering, and applied artificial intelligence.',
   location: 'Indonesia',
   almaMater: 'Universitas Pertahanan Republik Indonesia (Unhan RI)',
-  degree: 'Bachelor of Computer Science',
-  // Initially uses GitHub avatar; to use a custom portrait, place it in public/images/profile.jpg and update avatarUrl
+  degree: 'Bachelor of Computer Science (S.Kom.)',
   avatarUrl: 'https://avatars.githubusercontent.com/u/112299023?v=4',
   fallbackAvatarUrl: 'https://avatars.githubusercontent.com/u/112299023?v=4',
   cvPath: siteConfig.cv.path,
   cvFileName: siteConfig.cv.fileName,
   aboutSummary: [
-    'I am a Computer Science graduate from Universitas Pertahanan Republik Indonesia (Unhan RI) who works across the intersection of full-stack software engineering, IT infrastructure, network engineering, and applied artificial intelligence.',
-    'Rather than treating software, infrastructure, and AI as isolated disciplines, I design integrated systems where modern web interfaces, structured PostgreSQL backends, local network resilience, and computer vision models operate cohesively to solve practical operational challenges.',
-    'My approach emphasizes architectural clarity, disciplined execution, and continuous learning—turning ideas into dependable, production-oriented digital platforms.'
+    'I am a commissioned officer in the Indonesian Air Force (TNI Angkatan Udara) and a Computer Science graduate from Universitas Pertahanan Republik Indonesia (Unhan RI), Faculty of Defense Science and Technology.',
+    'Trained within a military cadet environment alongside rigorous informatics engineering studies, I apply technical expertise across full-stack software development, IT infrastructure, network engineering, and applied artificial intelligence to support institutional modernization and operational reliability.',
+    'My work focuses on translating complex administrative and technical workflows into dependable, self-hosted digital systems—combining clean architecture, disciplined execution, and resilient engineering standards.'
   ],
   philosophyQuote:
-    'Dependable technology emerges when clean software architecture meets resilient infrastructure and purposeful intelligence.',
+    'Dependable technology emerges when disciplined leadership meets sound software architecture, resilient networks, and purposeful intelligence.',
   focusAreas: [
     'Software Engineering',
     'Full-Stack Web Development',
@@ -31,31 +30,31 @@ export const profileData: ProfileData = {
     'Network Engineering',
     'Artificial Intelligence',
     'Computer Vision',
-    'Technology Innovation'
+    'Digital Modernization'
   ],
   corePillars: [
     {
       id: 'software',
       title: 'Full-Stack Software Engineering',
-      subtitle: 'React • Next.js • TypeScript • Node.js • PostgreSQL',
+      subtitle: 'React • TypeScript • Node.js • PostgreSQL',
       description:
-        'Architecting modular single-page interfaces, role-based REST APIs, and relational schemas tailored for clarity, maintainability, and real-world workflows.',
+        'Architecting structured single-page web platforms, role-based REST APIs, and relational schemas engineered for institutional clarity, accountability, and maintainability.',
       tags: ['ReactJS', 'TypeScript', 'Express.js', 'PostgreSQL']
     },
     {
       id: 'infrastructure',
       title: 'IT Infrastructure & Networking',
-      subtitle: 'LAN Topologies • RTSP Streams • Containerization',
+      subtitle: 'Enterprise Networks • LAN Topology • Containerization',
       description:
-        'Bridging application software with underlying systems—configuring local network services, multi-device RTSP camera feeds, and containerized environments.',
-      tags: ['Network Engineering', 'Docker', 'LAN Architecture', 'Linux/Windows']
+        'Designing and maintaining resilient local network services, hardware-software integration, RTSP camera infrastructure, and self-hosted server deployments.',
+      tags: ['Network Engineering', 'Docker', 'LAN Architecture', 'Systems Ops']
     },
     {
       id: 'ai',
       title: 'Applied AI & Computer Vision',
-      subtitle: 'YOLO • OpenCV • PyTorch • MediaPipe',
+      subtitle: 'YOLO • OpenCV • PyTorch • FastAPI',
       description:
-        'Building practical inference pipelines in Python and FastAPI for object detection, pose estimation, and automated visual analysis under real hardware constraints.',
+        'Developing self-hosted computer vision services in Python for automated inspection, pose assessment, and objective telemetry without reliance on external cloud dependencies.',
       tags: ['YOLO', 'OpenCV', 'PyTorch', 'FastAPI']
     }
   ],
@@ -64,31 +63,31 @@ export const profileData: ProfileData = {
       number: '01',
       title: 'Discipline',
       description:
-        'Applying structured engineering standards, clean version control, and methodical execution across every phase of system delivery.'
+        'Upholding military precision, structured engineering standards, and methodical execution in every technical undertaking.'
     },
     {
       number: '02',
       title: 'Responsibility',
       description:
-        'Taking ownership of software quality, data integrity, security boundaries, and the real-world reliability of deployed solutions.'
+        'Maintaining full accountability for system integrity, information security boundaries, and dependable operational outcomes.'
     },
     {
       number: '03',
       title: 'Problem Solving',
       description:
-        'Deconstructing complex operational bottlenecks into clear technical architectures that deliver measurable, practical utility.'
+        'Transforming real-world administrative and field challenges into structured, measurable digital capabilities.'
     },
     {
       number: '04',
       title: 'Continuous Learning',
       description:
-        'Evolving alongside modern web ecosystems, computer vision research, and infrastructure engineering practices through hands-on experimentation.'
+        'Advancing technical mastery across software systems, enterprise networking, and computer vision innovation.'
     },
     {
       number: '05',
       title: 'Consistent Effort',
       description:
-        'Delivering maximum results through steady, deliberate refinement—from backend schema design to the smallest user-interface detail.'
+        'Delivering dependable results through steady, rigorous refinement from system architecture to final deployment.'
     }
   ],
   socialLinks: [

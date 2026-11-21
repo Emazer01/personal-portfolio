@@ -42,9 +42,9 @@ export const SkillsSection: React.FC = () => {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="04 / TECHNICAL CAPABILITIES"
+          eyebrow="Technical Expertise"
           title="Engineering Stack & Infrastructure Matrix"
-          description="Capabilities organized across eight engineering disciplines—grounded in production project architectures rather than arbitrary percentage bars."
+          description="Capabilities organized across eight core technical disciplines—grounded in implemented systems rather than arbitrary percentages."
         />
 
         {/* Category Filter Pills */}

@@ -1,65 +1,56 @@
 import { CertificationItem } from '../types/portfolio';
 
-/**
- * Editable Certifications, Training Programs & Achievements data.
- * Keep details conservative and accurate; replace placeholder items with verified credentials.
- */
 export const certificationsData: CertificationItem[] = [
   {
-    id: 'cert-fullstack-training',
-    title: 'Full-Stack Web Development Training Track',
-    issuer: 'Issuer / Bootcamp Name (Editable)',
-    category: 'Training Program',
-    period: 'Add Completion Date',
+    id: 'cert-unhan-commissioning',
+    title: 'Bachelor of Computer Science & Military Cadet Formation',
+    issuer: 'Universitas Pertahanan Republik Indonesia (Unhan RI)',
+    category: 'Academic Achievement',
+    period: '2020 – 2024',
     summary:
-      'Structured engineering track covering ReactJS state management, backend REST APIs, authentication security, bcrypt/JWT hardening, and automated unit testing (evidenced by public module repositories).',
+      'Completed undergraduate Informatics engineering degree alongside structured defense university cadet leadership formation within the Cadet Corps Regiment.',
     highlights: [
-      'Completed Frontend & Backend Security case studies (modul17 & modul18)',
-      'Built persistent React applications and Node.js/Express REST backends',
-      'Editable: Add official certificate title and credential URL'
-    ],
-    isEditablePlaceholder: true
+      'Faculty of Defense Science and Technology (FSTP) — Program Studi Informatika',
+      'Undergraduate Thesis (2024): Responsive Web Guard Duty Reporting System (Jaga Resimen)'
+    ]
   },
   {
     id: 'cert-network-infra',
-    title: 'IT Infrastructure & Network Engineering Certification',
-    issuer: 'Certifying Body / Cisco / CompTIA / Institution (Editable)',
-    category: 'Certification',
-    period: 'Add Issue Date',
+    title: 'Enterprise Networking & IT Infrastructure Foundations',
+    issuer: 'Computer Networking & Infrastructure Track',
+    category: 'Training Program',
+    period: 'Academic & Applied Practice',
     summary:
-      'Editable slot for verified networking, systems administration, or IT infrastructure certifications (e.g., CCNA, MikroTik, CompTIA Network+, or institutional training).',
+      'Foundational and applied training in TCP/IP networking, routing and switching concepts (CCNA curriculum), local area network orchestration, and multi-device service deployment.',
     highlights: [
-      'Confirm credential ID, issuing organization, and validity period',
-      'Link verified badge or certificate PDF if available'
-    ],
-    isEditablePlaceholder: true
+      'LAN topology planning and multi-client workstation/monitor synchronization',
+      'RTSP IP camera stream integration and Dockerized service hosting'
+    ]
+  },
+  {
+    id: 'cert-fullstack-security',
+    title: 'Full-Stack Web Engineering & Application Security',
+    issuer: 'Independent & Structured Engineering Curriculum',
+    category: 'Certification',
+    period: '2022 – 2024',
+    summary:
+      'Completed structured full-stack modules covering ReactJS component architecture, Express.js REST APIs, PostgreSQL relational schemas, JWT/bcrypt authentication security, and unit testing.',
+    highlights: [
+      'Frontend & Backend Security Case Studies (modul17 & modul18)',
+      'Production-oriented RBAC & PostgreSQL web platforms'
+    ]
   },
   {
     id: 'cert-ai-cv',
-    title: 'Artificial Intelligence & Computer Vision Coursework',
-    issuer: 'Platform / University / Course Provider (Editable)',
-    category: 'Course',
-    period: 'Add Completion Date',
+    title: 'Applied Computer Vision & Machine Learning Engineering',
+    issuer: 'AI & Vision Systems Practice',
+    category: 'Technical Achievement',
+    period: '2024 – 2026',
     summary:
-      'Editable slot for machine learning, deep learning, PyTorch, or computer vision specializations supporting projects like SITRAK-AI, SIKAPTA AI, and Tani-Cek AI.',
+      'Self-hosted AI engineering covering Ultralytics YOLO object/pose detection, OpenCV perspective correction, MediaPipe landmark analysis, and PyTorch neural network training.',
     highlights: [
-      'Applied object detection (YOLO), pose estimation (MediaPipe), and PyTorch image classification',
-      'Add formal course certificates or Google Colab/Coursera/Dicoding credentials'
-    ],
-    isEditablePlaceholder: true
-  },
-  {
-    id: 'achv-academic',
-    title: 'Academic & Technical Distinctions',
-    issuer: 'Universitas Pertahanan Republik Indonesia / Competitions (Editable)',
-    category: 'Academic Achievement',
-    period: 'Add Year',
-    summary:
-      'Expandable record for bachelor degree honors, research publications, hackathon placements, or institutional commendations.',
-    highlights: [
-      'Bachelor of Computer Science graduate — Universitas Pertahanan Republik Indonesia',
-      'Editable: Add awards, thesis distinction, or competitive technology achievements'
-    ],
-    isEditablePlaceholder: true
+      'Designed CPU-optimized and offline-capable computer vision services (SITRAK-Detect & SIKAPTA AI)',
+      'Trained PyTorch agricultural disease classification pipeline on real field imagery (Tani-Cek AI)'
+    ]
   }
 ];

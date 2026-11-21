@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Briefcase, Calendar, CheckCircle2, MapPin } from 'lucide-react';
-import { EditableBadge } from '../../components/common/EditableBadge';
 import { SectionHeader } from '../../components/common/SectionHeader';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
 import { experienceData } from '../../data/experience';
 
 export const ExperienceSection: React.FC = () => {
-  const [showTemplates, setShowTemplates] = useState(true);
-
-  const entries = showTemplates
-    ? experienceData
-    : experienceData.filter((entry) => !entry.isEditableTemplate);
-
   return (
     <section
       id="experience"
@@ -21,34 +14,20 @@ export const ExperienceSection: React.FC = () => {
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
-          eyebrow="03 / EXPERIENCE"
-          title="Engineering Experience"
-          description="Documented software, AI, and infrastructure work—presented conservatively without fabricated employment titles or dates."
-          rightSlot={
-            <button
-              type="button"
-              onClick={() => setShowTemplates((prev) => !prev)}
-              className="rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3 py-1.5 font-mono text-xs text-[var(--text-secondary)] transition-colors hover:text-[var(--text-primary)]"
-            >
-              {showTemplates ? 'Hide Editable Template' : 'Show Editable Template'}
-            </button>
-          }
+          eyebrow="Professional Background"
+          title="Service & Engineering Experience"
+          description="Military officer service combined with practical full-stack software development, network infrastructure, and applied AI engineering."
         />
 
         <div className="space-y-6">
-          {entries.map((item) => (
+          {experienceData.map((item) => (
             <Card key={item.id} className="p-6">
               <div className="flex flex-wrap items-start justify-between gap-4">
                 <div>
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--accent-gold)]">
-                      <Briefcase className="h-3.5 w-3.5" aria-hidden="true" />
-                      {item.employmentType}
-                    </span>
-                    {item.isEditableTemplate && (
-                      <EditableBadge label="Confirm LinkedIn Details" />
-                    )}
-                  </div>
+                  <span className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--accent-gold)]">
+                    <Briefcase className="h-3.5 w-3.5" aria-hidden="true" />
+                    {item.employmentType}
+                  </span>
                   <h3 className="mt-1.5 font-editorial text-xl font-bold text-[var(--text-primary)]">
                     {item.position}
                   </h3>
@@ -76,7 +55,7 @@ export const ExperienceSection: React.FC = () => {
               <div className="mt-5 grid gap-6 border-t border-[var(--border-subtle)] pt-5 lg:grid-cols-2">
                 <div>
                   <h4 className="mb-2.5 font-mono text-[11px] uppercase tracking-wider text-[var(--text-primary)]">
-                    Core Responsibilities
+                    Key Duties &amp; Focus
                   </h4>
                   <ul className="space-y-2">
                     {item.responsibilities.map((resp) => (
@@ -96,7 +75,7 @@ export const ExperienceSection: React.FC = () => {
 
                 <div>
                   <h4 className="mb-2.5 font-mono text-[11px] uppercase tracking-wider text-[var(--text-primary)]">
-                    Key Deliverables &amp; Outcomes
+                    Outcomes &amp; Deliverables
                   </h4>
                   <ul className="space-y-2">
                     {item.achievements.map((ach) => (
