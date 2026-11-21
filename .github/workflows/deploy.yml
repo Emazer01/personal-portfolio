@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
   pages: write
   id-token: write
 
@@ -19,6 +19,8 @@ jobs:
   build:
     name: Build Static Production Bundle
     runs-on: ubuntu-latest
+    outputs:
+      pages_configured: ${{ steps.pages.outcome }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -35,10 +37,20 @@ jobs:
       - name: Type-check and build production bundle
         run: npm run build
 
-      - name: Configure GitHub Pages
+      - name: Publish dist to gh-pages branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
+
+      - name: Configure GitHub Pages (when enabled via GitHub Actions)
+        id: pages
+        continue-on-error: true
         uses: actions/configure-pages@v5
 
-      - name: Upload build artifact
+      - name: Upload build artifact for GitHub Pages
+        if: steps.pages.outcome == 'success'
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
@@ -46,6 +58,7 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
+    if: needs.build.outputs.pages_configured == 'success'
     runs-on: ubuntu-latest
     environment:
       name: github-pages

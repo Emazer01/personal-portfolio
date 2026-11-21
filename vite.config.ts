@@ -1,10 +1,10 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// Target deployment: https://Emazer01.github.io/ (user site root)
+// Relative base ('./') supports both project site (/personal-portfolio/) and user site (/)
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: './',
   build: {
     outDir: 'dist',
     sourcemap: false,

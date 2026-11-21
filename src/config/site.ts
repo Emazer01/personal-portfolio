@@ -1,7 +1,7 @@
 export const siteConfig = {
   siteName: 'Gary Ferdinand Wahyudi',
   siteTitle: 'Gary Ferdinand Wahyudi — Software Engineering, Infrastructure & Applied AI',
-  siteUrl: 'https://Emazer01.github.io',
+  siteUrl: 'https://emazer01.github.io/personal-portfolio',
   github: {
     username: 'Emazer01',
     profileUrl: 'https://github.com/Emazer01',
@@ -16,7 +16,7 @@ export const siteConfig = {
   },
   cv: {
     // Replace public/documents/Gary-Ferdinand-Wahyudi-CV.pdf with your final PDF CV anytime
-    path: '/documents/Gary-Ferdinand-Wahyudi-CV.pdf',
+    path: './documents/Gary-Ferdinand-Wahyudi-CV.pdf',
     fileName: 'Gary-Ferdinand-Wahyudi-CV.pdf',
     isPlaceholder: true
   },
