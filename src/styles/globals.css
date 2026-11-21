@@ -1,0 +1,168 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light dark;
+  --bg-primary: #f8fafc;
+  --bg-surface: #ffffff;
+  --bg-elevated: #f1f5f9;
+  --text-primary: #0b1220;
+  --text-secondary: #475569;
+  --border-subtle: rgba(15, 23, 42, 0.1);
+  --border-strong: rgba(15, 23, 42, 0.18);
+  --accent-gold: #9a7428;
+  --accent-gold-soft: rgba(154, 116, 40, 0.1);
+  --accent-blue: #0284c7;
+  --scrollbar-track: #e2e8f0;
+  --scrollbar-thumb: #64748b;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+:root:has(> head > meta[name='color-scheme'][content='dark']),
+html.dark {
+  color-scheme: dark;
+  --bg-primary: #0b1220;
+  --bg-surface: #111c2d;
+  --bg-elevated: #16243a;
+  --text-primary: #f5f7fa;
+  --text-secondary: #9aa9bc;
+  --border-subtle: rgba(154, 169, 188, 0.14);
+  --border-strong: rgba(154, 169, 188, 0.26);
+  --accent-gold: #d6b56d;
+  --accent-gold-soft: rgba(214, 181, 109, 0.14);
+  --accent-blue: #38bdf8;
+  --scrollbar-track: #0b1220;
+  --scrollbar-thumb: #334663;
+}
+
+:root:has(> head > meta[name='color-scheme'][content='light']),
+html.light {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:has(> head > meta[name='color-scheme'][content='light dark']) {
+    --bg-primary: #0b1220;
+    --bg-surface: #111c2d;
+    --bg-elevated: #16243a;
+    --text-primary: #f5f7fa;
+    --text-secondary: #9aa9bc;
+    --border-subtle: rgba(154, 169, 188, 0.14);
+    --border-strong: rgba(154, 169, 188, 0.26);
+    --accent-gold: #d6b56d;
+    --accent-gold-soft: rgba(214, 181, 109, 0.14);
+    --accent-blue: #38bdf8;
+    --scrollbar-track: #0b1220;
+    --scrollbar-thumb: #334663;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  accent-color: var(--accent-gold);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--accent-gold-soft);
+  color: var(--text-primary);
+}
+
+@supports not (scrollbar-color: auto) {
+  :root::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  :root::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+  :root::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 9999px;
+  }
+}
+
+/* Native Scroll Progress Indicator */
+#scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  z-index: 60;
+  pointer-events: none;
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-blue));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @supports (animation-timeline: scroll()) {
+    @keyframes grow-progress {
+      from {
+        transform: scaleX(0);
+      }
+      to {
+        transform: scaleX(1);
+      }
+    }
+
+    #scroll-progress {
+      animation: grow-progress auto linear;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+/* Scrollspy navigation tracking */
+nav.primary-nav {
+  scroll-target-group: auto;
+}
+
+nav.primary-nav a:is(:target-current, .target-current) {
+  color: var(--accent-gold);
+  border-color: var(--accent-gold);
+  font-weight: 600;
+}
+
+/* Subtle engineering blueprint grid background */
+.engineering-grid {
+  background-image:
+    linear-gradient(to right, var(--border-subtle) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--border-subtle) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.editorial-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  transition:
+    border-color 200ms ease,
+    transform 200ms ease,
+    box-shadow 200ms ease;
+}
+
+.editorial-card:hover {
+  border-color: var(--border-strong);
+}
+
+.font-editorial {
+  font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+  letter-spacing: -0.028em;
+}
