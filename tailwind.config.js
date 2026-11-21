@@ -6,29 +6,29 @@ export default {
     extend: {
       colors: {
         navy: {
-          DEFAULT: '#0B1220',
-          950: '#070C16',
-          900: '#0B1220',
-          800: '#111C2D',
-          700: '#18273E'
+          DEFAULT: '#061121',
+          950: '#040B17',
+          900: '#061121',
+          800: '#0C1E38',
+          700: '#122A4D'
         },
         slate: {
-          surface: '#111C2D',
-          elevated: '#16243A'
+          surface: '#0C1E38',
+          elevated: '#122A4D'
         },
         gold: {
           DEFAULT: '#D6B56D',
-          light: '#E3C684',
+          light: '#E5CA8A',
           deep: '#9A7428',
-          muted: 'rgba(214, 181, 109, 0.14)'
+          muted: 'rgba(214, 181, 109, 0.16)'
         },
         tech: {
           blue: '#38BDF8',
-          indigo: '#3B82F6'
+          indigo: '#0EA5E9'
         },
         mist: {
-          white: '#F5F7FA',
-          gray: '#9AA9BC'
+          white: '#F4F8FC',
+          gray: '#9BB2CB'
         }
       },
       fontFamily: {
@@ -37,8 +37,8 @@ export default {
         mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace']
       },
       boxShadow: {
-        editorial: '0 18px 50px -24px rgba(0, 0, 0, 0.55)',
-        gold: '0 0 0 1px rgba(214, 181, 109, 0.25), 0 12px 30px -14px rgba(214, 181, 109, 0.2)'
+        editorial: '0 20px 55px -24px rgba(2, 12, 27, 0.72)',
+        gold: '0 0 0 1px rgba(214, 181, 109, 0.3), 0 12px 32px -14px rgba(56, 189, 248, 0.25)'
       }
     }
   },

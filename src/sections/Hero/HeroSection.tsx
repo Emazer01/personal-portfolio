@@ -7,7 +7,7 @@ import {
   GraduationCap,
   Linkedin,
   MapPin,
-  Shield
+  Plane
 } from 'lucide-react';
 import { Button } from '../../components/ui/Button';
 import { siteConfig } from '../../config/site';
@@ -29,8 +29,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
       tabIndex={-1}
       className="relative overflow-hidden py-16 outline-none sm:py-24"
     >
-      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-12 lg:px-8">
-        {/* Left Formal Column */}
+      {/* Air Force horizon radar glow */}
+      <div
+        className="pointer-events-none absolute -top-28 left-1/2 h-[440px] w-[860px] -translate-x-1/2 rounded-full opacity-35 blur-3xl"
+        style={{
+          background:
+            'radial-gradient(circle, rgba(56,189,248,0.24) 0%, rgba(214,181,109,0.14) 48%, transparent 74%)'
+        }}
+        aria-hidden="true"
+      />
+
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 sm:px-6 lg:grid-cols-12 lg:gap-10 lg:px-8">
+        {/* Left Formal Officer Column */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}
@@ -38,9 +48,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           className="lg:col-span-7"
         >
           <div className="mb-5 flex flex-wrap items-center gap-2.5">
-            <span className="inline-flex items-center gap-2 rounded-md border border-[var(--accent-gold)]/40 bg-[var(--accent-gold-soft)] px-3 py-1 font-mono text-[11px] font-medium uppercase tracking-wider text-[var(--accent-gold)]">
-              <Shield className="h-3.5 w-3.5" aria-hidden="true" />
-              Indonesian Air Force Officer
+            <span className="inline-flex items-center gap-2 rounded-md border border-[var(--accent-blue)]/40 bg-[var(--accent-blue-soft)] px-3 py-1 font-mono text-[11px] font-semibold uppercase tracking-wider text-[var(--accent-blue)]">
+              <Plane className="h-3.5 w-3.5 text-[var(--accent-gold)]" aria-hidden="true" />
+              Indonesian Air Force Officer &bull; TNI AU
             </span>
             <span className="inline-flex items-center gap-1.5 rounded-md border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3 py-1 font-mono text-[11px] text-[var(--text-secondary)]">
               <MapPin className="h-3 w-3 text-[var(--accent-gold)]" aria-hidden="true" />
@@ -48,13 +58,15 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </span>
           </div>
 
-          <p className="font-mono text-sm font-medium tracking-wide text-[var(--text-secondary)]">
-            {profileData.name}
+          <p className="font-mono text-sm font-medium tracking-wide text-[var(--accent-gold)]">
+            {profileData.name}, S.Kom.
           </p>
 
           <h1 className="font-editorial mt-3 text-4xl font-bold leading-[1.1] tracking-tight text-[var(--text-primary)] sm:text-5xl lg:text-[3.25rem]">
             Building Ideas Into{' '}
-            <span className="text-[var(--accent-gold)]">Digital Solutions.</span>
+            <span className="bg-gradient-to-r from-[var(--accent-blue)] to-[var(--accent-gold)] bg-clip-text text-transparent">
+              Digital Solutions.
+            </span>
           </h1>
 
           <p className="mt-5 max-w-xl text-base leading-relaxed text-[var(--text-secondary)] sm:text-lg">
@@ -96,7 +108,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 target="_blank"
                 rel="noreferrer"
                 aria-label="Gary Ferdinand Wahyudi on GitHub"
-                className="inline-flex h-11 items-center gap-2 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3.5 text-sm font-medium text-[var(--text-primary)] transition-colors hover:border-[var(--accent-gold)]/60"
+                className="inline-flex h-11 items-center gap-2 rounded-lg border border-[var(--border-subtle)] bg-[var(--bg-surface)] px-3.5 text-sm font-medium text-[var(--text-primary)] transition-colors hover:border-[var(--accent-blue)]/60"
               >
                 <Github className="h-4 w-4" aria-hidden="true" />
                 <span className="hidden sm:inline">GitHub</span>
@@ -115,7 +127,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
           </div>
 
-          {/* Formal Summary Strip */}
+          {/* Air Force & Technical Readiness Summary */}
           <div className="mt-10 grid max-w-xl grid-cols-3 gap-4 border-t border-[var(--border-subtle)] pt-6">
             <div>
               <div className="font-editorial text-xl font-bold text-[var(--text-primary)] sm:text-2xl">
@@ -127,10 +139,10 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             </div>
             <div>
               <div className="font-editorial text-xl font-bold text-[var(--text-primary)] sm:text-2xl">
-                S.Kom.
+                Unhan RI
               </div>
               <div className="mt-0.5 font-mono text-[11px] text-[var(--text-secondary)]">
-                Unhan RI Informatics
+                Informatics (S.Kom.)
               </div>
             </div>
             <div>
@@ -138,13 +150,13 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 {repoCount} Repos
               </div>
               <div className="mt-0.5 font-mono text-[11px] text-[var(--text-secondary)]">
-                Full-Stack &amp; AI Systems
+                Systems &amp; AI Projects
               </div>
             </div>
           </div>
         </motion.div>
 
-        {/* Right Formal Officer & Technical Summary Card */}
+        {/* Right Air Force Avionics & Radar HUD Card */}
         <motion.div
           initial={{ opacity: 0, y: 14 }}
           animate={{ opacity: 1, y: 0 }}

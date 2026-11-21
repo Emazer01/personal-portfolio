@@ -13,7 +13,7 @@ export const Card: React.FC<CardProps> = ({
 }) => {
   return (
     <div
-      className={`editorial-card rounded-xl ${
+      className={`hud-corner-card rounded-xl ${
         interactive
           ? 'hover:-translate-y-0.5 hover:shadow-editorial'
           : ''

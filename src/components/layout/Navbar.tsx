@@ -29,17 +29,35 @@ export const Navbar: React.FC<NavbarProps> = ({
         <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <a
             href="#hero"
-            className="group inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-gold)] rounded-lg"
+            className="group inline-flex items-center gap-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent-blue)] rounded-lg"
           >
-            <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--accent-gold)]/45 bg-[var(--bg-surface)] font-mono text-xs font-bold tracking-wider text-[var(--accent-gold)] transition-colors group-hover:border-[var(--accent-gold)]">
-              {profileData.monogram}
+            <span className="flex h-9 w-9 items-center justify-center rounded-lg border border-[var(--accent-blue)]/40 bg-[var(--bg-surface)] transition-colors group-hover:border-[var(--accent-gold)]">
+              <svg
+                viewBox="0 0 36 36"
+                className="h-6 w-6"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path d="M3 15L14 18.5L12 20.8L5 19L3 15Z" fill="var(--accent-gold)" />
+                <path d="M33 15L22 18.5L24 20.8L31 19L33 15Z" fill="var(--accent-gold)" />
+                <path
+                  d="M18 7L23 11V20.5C23 24.8 18 29 18 29C18 29 13 24.8 13 20.5V11L18 7Z"
+                  fill="var(--bg-elevated)"
+                  stroke="var(--accent-gold)"
+                  strokeWidth="1.4"
+                />
+                <polygon
+                  points="18,12 19.3,15.6 23,15.8 20.1,18 21.1,21.6 18,19.5 14.9,21.6 15.9,18 13,15.8 16.7,15.6"
+                  fill="var(--accent-blue)"
+                />
+              </svg>
             </span>
             <div className="hidden sm:block">
               <div className="font-editorial text-sm font-semibold leading-none text-[var(--text-primary)]">
                 {profileData.name}
               </div>
-              <div className="mt-1 font-mono text-[10px] tracking-wide text-[var(--text-secondary)]">
-                Indonesian Air Force Officer &bull; B.Comp.Sc
+              <div className="mt-1 font-mono text-[10px] tracking-wide text-[var(--accent-blue)]">
+                TNI ANGKATAN UDARA &bull; S.Kom.
               </div>
             </div>
           </a>
