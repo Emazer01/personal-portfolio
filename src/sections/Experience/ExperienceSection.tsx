@@ -1,5 +1,12 @@
 import React from 'react';
-import { Briefcase, Calendar, CheckCircle2, MapPin } from 'lucide-react';
+import {
+  Briefcase,
+  Building2,
+  Calendar,
+  CheckCircle2,
+  MapPin,
+  Shield
+} from 'lucide-react';
 import { SectionHeader } from '../../components/common/SectionHeader';
 import { Badge } from '../../components/ui/Badge';
 import { Card } from '../../components/ui/Card';
@@ -15,28 +22,46 @@ export const ExperienceSection: React.FC = () => {
       <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <SectionHeader
           eyebrow="Professional Background"
-          title="Service & Engineering Experience"
-          description="Military officer service combined with practical full-stack software development, network infrastructure, and applied AI engineering."
+          title="Rank, Command & Engineering Experience"
+          description="Commissioned service in the Indonesian Air Force paired with practical software engineering, IT infrastructure, and applied AI systems development."
         />
 
         <div className="space-y-6">
           {experienceData.map((item) => (
             <Card key={item.id} className="p-6">
-              <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-start">
                 <div>
-                  <span className="inline-flex items-center gap-1.5 font-mono text-xs font-medium text-[var(--accent-gold)]">
-                    <Briefcase className="h-3.5 w-3.5" aria-hidden="true" />
-                    {item.employmentType}
-                  </span>
-                  <h3 className="mt-1.5 font-editorial text-xl font-bold text-[var(--text-primary)]">
+                  <div className="flex flex-wrap items-center gap-2">
+                    {item.rank && (
+                      <Badge variant="gold">
+                        <Shield className="h-3 w-3" aria-hidden="true" />
+                        Rank: {item.rank}
+                      </Badge>
+                    )}
+                    <Badge variant="outline">
+                      <Briefcase className="h-3 w-3" aria-hidden="true" />
+                      {item.employmentType}
+                    </Badge>
+                  </div>
+
+                  <h3 className="mt-3 font-editorial text-xl font-bold text-[var(--text-primary)]">
                     {item.position}
                   </h3>
-                  <p className="mt-0.5 text-sm font-medium text-[var(--accent-blue)]">
-                    {item.organization}
-                  </p>
+
+                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+                    <span className="inline-flex items-center gap-1.5 font-medium text-[var(--accent-blue)]">
+                      <Building2 className="h-3.5 w-3.5" aria-hidden="true" />
+                      {item.organization}
+                    </span>
+                    {item.unit && (
+                      <span className="font-mono text-xs text-[var(--text-secondary)]">
+                        &bull; {item.unit}
+                      </span>
+                    )}
+                  </div>
                 </div>
 
-                <div className="flex flex-col items-start gap-1.5 text-xs text-[var(--text-secondary)] sm:items-end">
+                <div className="flex shrink-0 flex-col items-start gap-1.5 text-xs text-[var(--text-secondary)] sm:items-end">
                   <span className="inline-flex items-center gap-1.5 font-mono">
                     <Calendar className="h-3.5 w-3.5 text-[var(--accent-gold)]" aria-hidden="true" />
                     {item.period}
@@ -44,6 +69,7 @@ export const ExperienceSection: React.FC = () => {
                   <span className="inline-flex items-center gap-1.5 font-mono">
                     <MapPin className="h-3.5 w-3.5 text-[var(--accent-blue)]" aria-hidden="true" />
                     {item.location}
+                    {item.locationType ? ` · ${item.locationType}` : ''}
                   </span>
                 </div>
               </div>
@@ -75,7 +101,7 @@ export const ExperienceSection: React.FC = () => {
 
                 <div>
                   <h4 className="mb-2.5 font-mono text-[11px] uppercase tracking-wider text-[var(--text-primary)]">
-                    Outcomes &amp; Deliverables
+                    Highlights &amp; Deliverables
                   </h4>
                   <ul className="space-y-2">
                     {item.achievements.map((ach) => (

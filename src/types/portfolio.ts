@@ -62,9 +62,12 @@ export interface ExperienceItem {
   id: string;
   organization: string;
   position: string;
+  rank?: string;
+  unit?: string;
   employmentType: string;
   period: string;
   location: string;
+  locationType?: 'On-site' | 'Hybrid' | 'Remote';
   description: string;
   responsibilities: string[];
   technologies: string[];
