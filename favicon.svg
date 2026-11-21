@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <rect width="64" height="64" rx="14" fill="#061121" />
+  <rect x="3" y="3" width="58" height="58" rx="11" stroke="#38BDF8" stroke-opacity="0.45" stroke-width="1.5" />
+  <!-- Stylized Air Force Wings -->
+  <path d="M10 26L25 31L22 34L12 31L10 26Z" fill="#D6B56D" />
+  <path d="M13 33L24 35L22 38L15 37L13 33Z" fill="#38BDF8" fill-opacity="0.85" />
+  <path d="M54 26L39 31L42 34L52 31L54 26Z" fill="#D6B56D" />
+  <path d="M51 33L40 35L42 38L49 37L51 33Z" fill="#38BDF8" fill-opacity="0.85" />
+  <!-- Center Shield / Star -->
+  <path d="M32 16L39 21V34C39 40 32 46 32 46C32 46 25 40 25 34V21L32 16Z" fill="#0C1E38" stroke="#D6B56D" stroke-width="1.8" />
+  <path d="M32 23L33.9 28.1L39.2 28.3L35 31.6L36.5 36.8L32 33.8L27.5 36.8L29 31.6L24.8 28.3L30.1 28.1L32 23Z" fill="#38BDF8" />
+</svg>

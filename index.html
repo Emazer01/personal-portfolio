@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="dark" />
+    <script>
+      try {
+        var stored = localStorage.getItem('color-scheme');
+        var target =
+          stored === 'light' || stored === 'dark' || stored === 'light dark'
+            ? stored
+            : 'dark';
+        var meta = document.querySelector('meta[name="color-scheme"]');
+        if (meta) meta.setAttribute('content', target);
+        var isDark =
+          target === 'dark' ||
+          (target === 'light dark' &&
+            window.matchMedia('(prefers-color-scheme: dark)').matches);
+        document.documentElement.classList.toggle('dark', isDark);
+        document.documentElement.classList.toggle('light', !isDark);
+      } catch (e) {}
+    </script>
+
+    <title>Gary Ferdinand Wahyudi — Indonesian Air Force Officer | Software, Infrastructure &amp; AI</title>
+    <meta
+      name="description"
+      content="Official portfolio of Gary Ferdinand Wahyudi, S.Kom. — Indonesian Air Force Officer and Computer Science graduate from Universitas Pertahanan Republik Indonesia specializing in software engineering, IT infrastructure, network engineering, and applied AI."
+    />
+    <meta
+      name="keywords"
+      content="Gary Ferdinand Wahyudi, Indonesian Air Force Officer, TNI AU, Universitas Pertahanan Republik Indonesia, Software Engineering, IT Infrastructure, Network Engineering, Computer Vision, AI, Portfolio"
+    />
+    <meta name="author" content="Gary Ferdinand Wahyudi" />
+    <link rel="canonical" href="https://emazer01.github.io/personal-portfolio/" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://emazer01.github.io/personal-portfolio/" />
+    <meta
+      property="og:title"
+      content="Gary Ferdinand Wahyudi — Indonesian Air Force Officer &amp; Systems Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Indonesian Air Force Officer and Computer Science graduate combining leadership discipline with expertise in full-stack software engineering, IT infrastructure, networking, and applied AI."
+    />
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/112299023?v=4" />
+    <meta property="og:site_name" content="Gary Ferdinand Wahyudi" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Gary Ferdinand Wahyudi — Indonesian Air Force Officer | Software, Infrastructure & AI"
+    />
+    <meta
+      name="twitter:description"
+      content="Portfolio showcasing full-stack web systems, computer vision applications, IT infrastructure, and engineering projects."
+    />
+    <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/112299023?v=4" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="./assets/index-CH0O-asr.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/motion-Bna3Pusz.js">
+    <link rel="modulepreload" crossorigin href="./assets/vendor-CfDj9pDs.js">
+    <link rel="modulepreload" crossorigin href="./assets/icons-DIryRxJ1.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-lUTW2f82.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
